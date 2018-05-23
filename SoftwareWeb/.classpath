@@ -3,6 +3,10 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/Java">
 		<attributes>
+<<<<<<< HEAD
+=======
+			<attribute name="module" value="true"/>
+>>>>>>> third
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
@@ -13,5 +17,20 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+<<<<<<< HEAD
+=======
+	<classpathentry kind="lib" path="D:/Program Files/Java/commons/commons-fileupload-1.2.1/lib/commons-fileupload-1.2.1.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/commons/commons-fileupload-1.2.1/lib/commons-fileupload-1.2.1-javadoc.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/commons/commons-fileupload-1.2.1/lib/commons-fileupload-1.2.1-sources.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/mysql-connector-java-5.1.39-bin.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/commons/commons-email-1.1/commons-email-1.1.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/commons/commons-email-1.1/commons-email-1.1-javadoc.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/commons/commons-email-1.1/commons-email-1.1-sources.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/commons/commons-beanutils-1.8.0/commons-beanutils-1.8.0.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/commons/commons-beanutils-1.8.0/commons-beanutils-1.8.0-javadoc.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/commons/commons-beanutils-1.8.0/commons-beanutils-1.8.0-sources.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/commons/commons-beanutils-1.8.0/commons-beanutils-bean-collections-1.8.0.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/commons/commons-beanutils-1.8.0/commons-beanutils-core-1.8.0.jar"/>
+>>>>>>> third
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
