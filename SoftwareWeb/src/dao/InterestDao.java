@@ -1,12 +1,12 @@
-package dao;
+package src.dao;
 
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
 
-import util.DBconn;
-import entity.User;
+import src.util.DBconn;
+import src.entity.User;
 /**
  *  获取感兴趣的人的用户信息
  

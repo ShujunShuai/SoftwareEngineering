@@ -1,4 +1,4 @@
-package servlet;
+package src.servlet;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,9 +16,9 @@ import org.apache.commons.fileupload.FileItemFactory;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
-import dao.ArticalPublish;
-import entity.Artical;
-import tool.DataTool;
+import src.dao.ArticalPublish;
+import src.entity.Artical;
+import src.tool.DataTool;
 
 public class ArticalPublishServlet extends HttpServlet {
 

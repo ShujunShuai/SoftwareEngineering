@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns="http://java.sun.com/xml/ns/javaee" 
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
+version="3.0">
+  <display-name>SoftwareWeb</display-name>
+  <filter><!--过滤器配置-->  
+    <filter-name>EncodingFilter</filter-name>  
+    <filter-class>filter.EncodingFilter</filter-class><!--全路径 从根包开始一直到类名-->  
+  </filter>  
+  <filter-mapping>  
+    <filter-name>EncodingFilter</filter-name>  
+    <url-pattern>/*</url-pattern> <!--*即为过滤所有-->  
+  </filter-mapping> 
+  
+  <servlet><!--servlet类路径配置-->  
+    <servlet-name>DengluServlet</servlet-name>  
+    <servlet-class>servlet.DengluServlet</servlet-class>  
+  </servlet>  
+  <servlet>  
+    <servlet-name>ZhuceServlet</servlet-name>  
+    <servlet-class>servlet.ZhuceServlet</servlet-class>  
+  </servlet>  
+  <servlet>  
+    <servlet-name>Searchall</servlet-name>  
+    <servlet-class>servlet.Searchall</servlet-class>  
+  </servlet>  
+  <servlet>  
+    <servlet-name>DeleteServlet</servlet-name>  
+    <servlet-class>servlet.DeleteServlet</servlet-class>  
+  </servlet>  
+  <servlet>  
+    <servlet-name>UpdateServlet</servlet-name>  
+    <servlet-class>servlet.UpdateServlet</servlet-class>  
+  </servlet>  
+   <servlet>  
+    <servlet-name>SenfSms</servlet-name>  
+    <servlet-class>servlet.SenfSms</servlet-class>  
+  </servlet>  
+  
+  
+  <servlet-mapping><!--servlet类映射配置-->  
+    <servlet-name>DengluServlet</servlet-name>  
+    <url-pattern>/DengluServlet</url-pattern>  
+  </servlet-mapping>  
+  <servlet-mapping>  
+    <servlet-name>ZhuceServlet</servlet-name>  
+    <url-pattern>/ZhuceServlet</url-pattern>  
+  </servlet-mapping>  
+  <servlet-mapping>  
+    <servlet-name>Searchall</servlet-name>  
+    <url-pattern>/Searchall</url-pattern>  
+  </servlet-mapping>  
+  <servlet-mapping>  
+    <servlet-name>DeleteServlet</servlet-name>  
+    <url-pattern>/DeleteServlet</url-pattern>  
+  </servlet-mapping>  
+  <servlet-mapping>  
+    <servlet-name>UpdateServlet</servlet-name>  
+    <url-pattern>/UpdateServlet</url-pattern>  
+  </servlet-mapping>  
+   <servlet-mapping>  
+    <servlet-name>SenfSms</servlet-name>  
+    <url-pattern>/SenfSms</url-pattern>  
+  </servlet-mapping> 
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    
+  </welcome-file-list>
+</web-app>

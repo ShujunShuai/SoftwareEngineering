@@ -1,4 +1,4 @@
-package servlet;
+package src.servlet;
 
 import java.io.IOException;
 import java.util.List;
@@ -9,9 +9,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import dao.AttentionDao;
-import dao.FollowingDao;
-import entity.User;
+import src.dao.AttentionDao;
+import src.dao.FollowingDao;
+import src.entity.User;
 
 public class ShowFollowingServlet extends HttpServlet {
 

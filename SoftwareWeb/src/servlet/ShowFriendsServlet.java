@@ -1,4 +1,4 @@
-package servlet;
+package src.servlet;
 
 import java.io.IOException;
 import java.util.List;
@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import dao.FriendsDao;
-import entity.User;
+import src.dao.FriendsDao;
+import src.entity.User;
 
 
 public class ShowFriendsServlet extends HttpServlet {

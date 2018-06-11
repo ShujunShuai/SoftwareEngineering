@@ -1,4 +1,4 @@
-package servlet;
+package src.servlet;
 
 import java.io.IOException;
 
@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.AttentionDao;
-import entity.User;
+import src.dao.AttentionDao;
+import src.entity.User;
 
 @SuppressWarnings("serial")
 public class AttentionServlet extends HttpServlet {

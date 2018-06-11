@@ -1,4 +1,4 @@
-package servlet;
+package src.servlet;
 
 import java.io.IOException;
 
@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.mail.EmailException;
 import org.apache.commons.mail.SimpleEmail;
 
-import dao.UserDao;
-import entity.User;
+import src.dao.UserDao;
+import src.entity.User;
 
 public class FindpasswordServlet extends HttpServlet {
 

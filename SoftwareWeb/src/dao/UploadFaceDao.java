@@ -1,4 +1,4 @@
-package dao;
+package src.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import util.DBconn;
-import entity.User;
+import src.util.DBconn;
+import src.entity.User;
 
 /**
  * 首页加载头像

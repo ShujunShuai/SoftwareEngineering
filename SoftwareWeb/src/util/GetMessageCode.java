@@ -1,4 +1,4 @@
-package util;
+package src.util;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -12,7 +12,7 @@ import java.security.NoSuchAlgorithmException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import org.json.JSONObject;
+import src.org.json.JSONObject;
 
 
 public class GetMessageCode {

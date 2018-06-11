@@ -1,9 +1,9 @@
-package dao;
+package src.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import util.DBconn;
+import src.util.DBconn;
 /**
  * 
  */

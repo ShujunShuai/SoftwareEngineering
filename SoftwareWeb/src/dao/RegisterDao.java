@@ -1,10 +1,10 @@
-package dao;
+package src.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import util.DBconn;
-import entity.User;
+import src.util.DBconn;
+import src.entity.User;
 
 /**
  *登陆
@@ -13,7 +13,7 @@ import entity.User;
  */
 public class RegisterDao {
 
-	// ����û��ǳ��Ƿ����
+	// 检查用户昵称是否可用
 	public boolean checkNick(String nick) {
 		DBconn DBconn = new DBconn();
 		String sql = "select u_nick from User where u_nick =?";

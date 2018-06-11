@@ -1,4 +1,4 @@
-package servlet;
+package src.servlet;
 
 import java.io.IOException;
 import java.util.Date;
@@ -9,10 +9,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import dao.CollectDao;
-import entity.Artical;
-import entity.Collect;
-import entity.User;
+import src.dao.CollectDao;
+import src.entity.Artical;
+import src.entity.Collect;
+import src.entity.User;
 
 public class AddCollectServlet extends HttpServlet {
 

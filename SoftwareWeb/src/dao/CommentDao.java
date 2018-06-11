@@ -1,13 +1,13 @@
-package dao;
+package src.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
 
-import util.DBconn;
-import entity.Artical;
-import entity.Comment;
+import src.util.DBconn;
+import src.entity.Artical;
+import src.entity.Comment;
 /**
  * 
  * 

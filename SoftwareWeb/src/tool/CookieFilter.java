@@ -1,4 +1,4 @@
-package tool;
+package src.tool;
 
 import java.io.IOException;
 
@@ -13,9 +13,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import dao.AttentionDao;
-import dao.UploadFaceDao;
-import entity.User;
+import src.dao.AttentionDao;
+import src.dao.UploadFaceDao;
+import src.entity.User;
 
 public class CookieFilter implements Filter{
 

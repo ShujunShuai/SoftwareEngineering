@@ -1,18 +1,18 @@
-package dao;
+package src.dao;
 
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-import util.DBconn;
-import entity.User;
+import src.util.DBconn;
+import src.entity.User;
 /**
  * 
  *
  */
 public class FansDao {
 	
-	//�����û�id���ҷ�˿��Ϣ
+	//根据用户id查找粉丝信息
 	public List<User> getFansByUid(final int uid, int pageSize, int pageNo){
 		List<User> fanslist = new ArrayList<User>();
 		String strSQL = "select * from User where u_id =any " +

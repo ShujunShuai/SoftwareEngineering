@@ -1,9 +1,9 @@
-package dao;
+package src.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import util.DBconn;
+import src.util.DBconn;
 /**
  * 
  * @author 
@@ -13,7 +13,7 @@ public class CountUser {
 	
 	//ͳ���û�����
 	public long countUser(){
-		String sql="select count(*) from userinfo";
+		String sql="select count(*) from User";
 		DBconn dbConn=new DBconn();
 		ResultSet rs1=dbConn.execQuery(sql, new Object[]{});
 		try {

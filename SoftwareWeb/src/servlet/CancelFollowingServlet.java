@@ -1,4 +1,4 @@
-package servlet;
+package src.servlet;
 
 import java.io.IOException;
 
@@ -10,11 +10,11 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 
-import dao.AttentionDao;
-import dao.CancleFollowingDao;
+import src.dao.AttentionDao;
+import src.dao.CancleFollowingDao;
 
 
-import entity.User;
+import src.entity.User;
 
 public class CancelFollowingServlet extends HttpServlet {
 

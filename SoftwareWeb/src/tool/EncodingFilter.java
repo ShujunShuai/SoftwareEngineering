@@ -1,4 +1,4 @@
-package tool;
+package src.tool;
 
 import java.io.IOException;
 
@@ -10,7 +10,6 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 /**
  * �����ʽ������
- * @author Vincent
  *
  */
 public class EncodingFilter implements Filter{

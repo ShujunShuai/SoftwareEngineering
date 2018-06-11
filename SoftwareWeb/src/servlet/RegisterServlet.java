@@ -1,4 +1,4 @@
-package servlet;
+package src.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -10,10 +10,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import dao.AttentionDao;
-import dao.RegisterDao;
-import entity.Artical;
-import entity.User;
+import src.dao.AttentionDao;
+import src.dao.RegisterDao;
+import src.entity.Artical;
+import src.entity.User;
 
 public class RegisterServlet extends HttpServlet {
 
@@ -46,7 +46,7 @@ public class RegisterServlet extends HttpServlet {
 		User.setU_addr(addr);
 		User.setU_sex(sex);
 		User.setU_account(mail);
-		User.setU_img("/CodecoreMicroArtical/face/NoName.jpg");
+		User.setU_img("/SoftwareWeb/face/NoName.jpg");
 		boolean flag=registerDao.addUser(User);
 		if (flag) {
 			HttpSession session=request.getSession();

@@ -1,4 +1,4 @@
-package filter;
+package src.filter;
 //解决中文字符集乱码，它需要实现Filter接口，并重写doFilter函数
 
 import java.io.IOException;  

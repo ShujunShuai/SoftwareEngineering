@@ -1,7 +1,8 @@
-package util;
+package src.util;
 //处理对数据库的连接操作（用户名或密码按照自己的数据库更改）
 import java.sql.*;  
-import util.Config;
+
+import src.util.Config;
 
 public class DBconn {  
 	
@@ -108,3 +109,4 @@ public class DBconn {
 
 
 	}
+

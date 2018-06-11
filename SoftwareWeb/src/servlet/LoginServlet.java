@@ -1,4 +1,5 @@
-package servlet;
+
+package src.servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -10,10 +11,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import dao.AttentionDao;
-import dao.UploadFaceDao;
-import entity.Artical;
-import entity.User;
+import src.dao.AttentionDao;
+import src.dao.UploadFaceDao;
+import src.entity.Artical;
+import src.entity.User;
 
 
 @SuppressWarnings("serial")
@@ -88,3 +89,4 @@ public class LoginServlet extends HttpServlet {
         }
 	}
 }
+

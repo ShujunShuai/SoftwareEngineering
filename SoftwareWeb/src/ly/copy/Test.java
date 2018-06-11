@@ -1,4 +1,4 @@
-package ly.copy;
+package src.ly.copy;
 
 
 public class Test {

@@ -1,4 +1,4 @@
-package dao;
+package src.dao;
 
 
 import java.sql.ResultSet;
@@ -6,8 +6,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import util.DBconn;
-import entity.User;
+import src.util.DBconn;
+import src.entity.User;
 
 public class FriendsDao {
 	

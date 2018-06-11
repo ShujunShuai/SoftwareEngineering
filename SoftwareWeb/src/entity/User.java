@@ -1,8 +1,9 @@
-package entity;
+package src.entity;
+
+
 
 /**
  * 用户实体类，包装了用户的所有信息
- * @author Vincent
  *
  */
 public class User{
@@ -137,3 +138,4 @@ public class User{
 	
 	
 }
+

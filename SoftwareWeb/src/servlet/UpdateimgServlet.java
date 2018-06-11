@@ -1,4 +1,4 @@
-package servlet;
+package src.servlet;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,10 +16,10 @@ import org.apache.commons.fileupload.FileItemFactory;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
-import dao.AttentionDao;
-import dao.UserDao;
-import entity.User;
-import tool.DataTool;
+import src.dao.AttentionDao;
+import src.dao.UserDao;
+import src.entity.User;
+import src.tool.DataTool;
 
  
 
@@ -32,18 +32,18 @@ public class UpdateimgServlet extends HttpServlet {
 			try {
 				FileItemFactory factory = new DiskFileItemFactory();
 				ServletFileUpload fileload = new ServletFileUpload(factory);
-				// ��������ļ��ߴ磬������4MB
+				// 设置最大文件尺寸，这里是4MB
 				fileload.setSizeMax(4194304);
 				List<FileItem> files = fileload.parseRequest(request);
-				//ѭ����������ÿһ������
+				//循环迭代分析每一个表单项
 				Iterator<FileItem> iterator = files.iterator();
 				while (iterator.hasNext()) {
 					FileItem item = iterator.next();
-					//�����ǰ������ͨ���
+					//如果当前项是普通表单项。
 					if (item.isFormField()) { 
 //						do something
 					} else {
-						// ��û���ļ��������ļ�������·��
+						// 获得获得文件名，此文件名包括路径
 						String filename = item.getName();
 						if (filename != null) {
 							File file = new File(filename);
@@ -53,16 +53,16 @@ public class UpdateimgServlet extends HttpServlet {
 							item.write(filetoserver);
 							String filetodb =request.getContextPath()+"/face/"+ filename.substring(filename.lastIndexOf("\\")+1);
 							int u_id = Integer.parseInt(request.getParameter("uid"));
-							User User = new User();
-							User.setU_img(filetodb);
-							User.setU_id(u_id);
+							User user = new User();
+							user.setU_img(filetodb);
+							user.setU_id(u_id);
 							UserDao userDao = new UserDao();
-							userDao.updateImg(User);
+							userDao.updateImg(user);
 							HttpSession session = request.getSession();
-							//��ȡ�µ�User
+							//获取新的User
 							AttentionDao attentionDao=new AttentionDao();
-							User=attentionDao.getUserInfo(u_id);
-							session.setAttribute("User",User);
+							user=attentionDao.getUserInfo(u_id);
+							session.setAttribute("User",user);
 							response.sendRedirect("../myface.jsp");
 						}
 					}

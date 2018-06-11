@@ -1,4 +1,4 @@
-package dao;
+package src.dao;
 
 
 import java.sql.ResultSet;
@@ -7,9 +7,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import util.DBconn;
-import entity.Artical;
-import entity.Collect;
+import src.util.DBconn;
+import src.entity.Artical;
+import src.entity.Collect;
 
 
 public class  CollectDao {

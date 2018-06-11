@@ -1,4 +1,4 @@
-package servlet;
+package src.servlet;
 
 import java.io.IOException;
 
@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import dao.CommentDao;
-import entity.Artical;
+import src.dao.CommentDao;
+import src.entity.Artical;
 
 public class AddCommentServlet extends HttpServlet {
 

@@ -1,4 +1,4 @@
-package servlet;
+package src.servlet;
 
 import java.io.IOException;
 
@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.UserDao;
-import entity.User;
+import src.dao.UserDao;
+import src.entity.User;
  
 
 public class UpdateuserInfoServlet extends HttpServlet {
@@ -49,25 +49,25 @@ public class UpdateuserInfoServlet extends HttpServlet {
 		 String u_msn=request.getParameter("msn");
 		 String u_sign=request.getParameter("sign");
 		
-		User User=new User();
+		User userInfo=new User();
 		 
-		User.setU_account(u_account);
-		User.setU_sex(u_sex);
-		User.setU_date(u_date); 
-		User.setU_img(u_img);
-		User.setU_mail(u_mail);
-		User.setU_nick(u_nick);
-		User.setU_name(u_name);
-		User.setU_password(u_password);
-		User.setU_addr(u_addr);
-		User.setU_qq(u_qq);
-		User.setU_msn(u_msn);
-		User.setU_sign(u_sign);
+		userInfo.setU_account(u_account);
+		userInfo.setU_sex(u_sex);
+		userInfo.setU_date(u_date); 
+		userInfo.setU_img(u_img);
+		userInfo.setU_mail(u_mail);
+		userInfo.setU_nick(u_nick);
+		userInfo.setU_name(u_name);
+		userInfo.setU_password(u_password);
+		userInfo.setU_addr(u_addr);
+		userInfo.setU_qq(u_qq);
+		userInfo.setU_msn(u_msn);
+		userInfo.setU_sign(u_sign);
 
 		UserDao userDao = new UserDao();
-		boolean flag = userDao.updateUserInfo(User,u_id);
+		boolean flag = userDao.updateUser(userInfo,u_id);
 		int res = flag?1:2;
-		response.sendRedirect("../User.jsp?msg=" + res);
+		response.sendRedirect("../userinfo.jsp?msg=" + res);
 
 		 
 	}

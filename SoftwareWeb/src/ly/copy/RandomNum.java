@@ -1,4 +1,4 @@
-package ly.copy;
+package src.ly.copy;
 
 public class RandomNum {
 	private String random=(int)((Math.random()*9+1)*100000)+"";

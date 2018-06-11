@@ -1,12 +1,12 @@
-package dao;
+package src.dao;
 
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
 
-import util.DBconn;
-import entity.Artical;
+import src.util.DBconn;
+import src.entity.Artical;
 
 
 public class ArticalPublish {

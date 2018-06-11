@@ -1,14 +1,16 @@
-package dao;
+package src.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import util.DBconn;
-import entity.Artical;
-import entity.Collect;
-import entity.User;
+import src.util.DBconn;
+import src.entity.Artical;
+import src.entity.Collect;
+import src.entity.Book;
+import src.entity.User;
+import src.entity.BookInLibrary;
 
 public class SearchDao {
 	//�����ҵ���ҳ
@@ -133,7 +135,80 @@ public class SearchDao {
 			DBconn.closeConn();
 		}
 	}
-	//ͳ��������ҳ��΢������
+	
+	public List<Book> searchBook(final String bo_name){
+		List<Book> lstBooks=new ArrayList<Book>();
+		DBconn DBconn=new DBconn();		
+		String sql="select * from book where bo_name like ? order by bo_id desc";
+		ResultSet rs=DBconn.execQuery(sql, new Object[]{"%"+bo_name});
+		try {
+			while (rs.next()) {
+				Book book=new Book();
+				book.setbo_name(rs.getString("bo_name"));
+				book.setbo_id(rs.getInt("bo_id"));
+				book.setbo_date(rs.getDate("bo_date"));
+				book.setbo_author(rs.getString("bo_author"));
+				book.setbo_press(rs.getString("bo_press"));
+				book.setbo_introduction(rs.getString("bo_introduction"));
+				lstBooks.add(book);
+			}
+			return lstBooks;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			return null;
+		}finally{
+			DBconn.closeConn();
+		}		
+	}
+	
+	public List<Book> searchAuthor(final String bo_author){
+		List<Book> lstBooks=new ArrayList<Book>();
+		DBconn DBconn=new DBconn();		
+		String sql="select * from book where bo_name like ? order by bo_id desc ";
+		ResultSet rs=DBconn.execQuery(sql, new Object[]{"%"+bo_author});
+		try {
+			while (rs.next()) {
+				Book book=new Book();
+				book.setbo_name(rs.getString("bo_name"));
+				book.setbo_id(rs.getInt("bo_id"));
+				book.setbo_date(rs.getDate("bo_date"));
+				book.setbo_author(rs.getString("bo_author"));
+				book.setbo_press(rs.getString("bo_press"));
+				book.setbo_introduction(rs.getString("bo_introduction"));
+				lstBooks.add(book);
+			}
+			return lstBooks;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			return null;
+		}finally{
+			DBconn.closeConn();
+		}		
+	}
+	
+	public List<BookInLibrary> searchBookInLibrary(final Integer bo_id){
+		List<BookInLibrary> lstBooks=new ArrayList<BookInLibrary>();
+		DBconn DBconn=new DBconn();		
+		String sql="select * from book where bo_id= ? order by bo_libary desc ";
+		ResultSet rs=DBconn.execQuery(sql, new Object[]{"%"+bo_id});
+		try {
+			while (rs.next()) {
+				BookInLibrary book=new BookInLibrary();
+				book.setbo_id(rs.getInt("bo_id"));
+				book.setbo_liId(rs.getInt("bo_liId"));
+				book.setbo_status(rs.getString("bo_status"));
+				lstBooks.add(book);
+			}
+			return lstBooks;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			return null;
+		}finally{
+			DBconn.closeConn();
+		}		
+	}
+	
+	//统计搜索首页的文章总数
 	public int allSearchArticals(final String b_content,final int u_id ){
 		DBconn DBconn=new DBconn();
 		String sql="select count(*) from Artical where  b_content like ? and (u_id= any( select f_gid from friends where (f_uid=? and f_state=1) or (f_uid=? and f_state=2))or u_id=?  or u_id= any(select f_uid from friends where f_gid=? and f_state=2))";
@@ -151,7 +226,7 @@ public class SearchDao {
 			DBconn.closeConn();
 		}
 	}
-	//ͳ�������ҵ�΢��ҳ���΢������
+	//统计搜索我的页面的文章总数
 	public int allSearchMyArticals(final String b_content,final int u_id ){
 		DBconn DBconn=new DBconn();
 		String sql="select count(*) from Artical where  b_content like ? and u_id=?";
@@ -169,7 +244,7 @@ public class SearchDao {
 			DBconn.closeConn();
 		}
 	}
-	//ͳ�������ҵĺ���ҳ�������	
+	//统计搜索我的好友页面的总数
 	public int allSearchFriends(final String u_nick,final int u_id ){
 		DBconn DBconn=new DBconn();
 		String sql="select count(*) from User where u_nick like ? and (u_id=any(select f_gid from friends where f_uid=? and f_state=2) or u_id=any(select f_uid from friends where f_gid=? and f_state=2))";
@@ -187,7 +262,7 @@ public class SearchDao {
 			DBconn.closeConn();
 		}
 	}
-	//ͳ�������ҵ��ղ�ҳ����ղ�����
+	//统计搜索我的收藏页面的收藏总数
 	public int allSearchCollects(final String co_content,final int u_id ){
 		DBconn DBconn=new DBconn();
 		String sql="select count(*) from collect where co_content like ? and u_id=?";

@@ -1,4 +1,4 @@
-package servlet;
+package src.servlet;
 
 import java.io.IOException;
 
@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import dao.CollectDao;
-import entity.User;
+import src.dao.CollectDao;
+import src.entity.User;
 
 public class CancelCollectServlet extends HttpServlet {
 
